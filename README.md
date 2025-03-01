@@ -1,5 +1,22 @@
 # NAFS1
 
+// 1. For döngüsü ile sayının rakamlarının toplamını bulan algoritma
+Console.Write("Bir sayı giriniz: ");
+int number = int.Parse(Console.ReadLine());
+int sum = 0;
+for (; number > 0; number /= 10)
+{
+    sum += number % 10;
+}
+Console.WriteLine($"Rakamlar toplamı: {sum}");
+
+// 2. While döngüsü ile belirli şartlara uyan değer alan algoritma
+int validNumber;
+do
+{
+    Console.Write("10 ile 100 arasında bir sayı giriniz: ");
+    validNumber = int.Parse(Console.ReadLine());
+} while (validNumber < 10 || validNumber > 100);
 Console.WriteLine($"Geçerli sayı: {validNumber}");
 
 // 3. Foreach döngüsü ile yaş kategorisi belirleyen algoritma
@@ -59,6 +76,11 @@ Console.WriteLine("Filtrelenmiş liste: " + string.Join(", ", numList));
 // 11. Öğrenci notlarını 50’nin altına düşmeyecek şekilde güncelleyen algoritma
 List<int> grades = new List<int> {45, 60, 30, 80, 50};
 for (int i = 0; i < grades.Count; i++)
+{
+    if (grades[i] < 50) grades[i] = 50;
+}
+Console.WriteLine("Güncellenmiş notlar: " + string.Join(", ", grades));
+
 {
     if (grades[i] < 50) grades[i] = 50;
 }
