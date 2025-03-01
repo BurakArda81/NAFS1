@@ -1,4 +1,4 @@
-# NAFS1
+# NAFS2
 
 // 1. For döngüsü ile sayının rakamlarının toplamını bulan algoritma
 Console.Write("Bir sayı giriniz: ");
